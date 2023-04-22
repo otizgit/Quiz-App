@@ -103,7 +103,7 @@ export default function QuestionBox(props) {
   ));
 
   let percentageClass;
-  let percentageScore = numCorrectAnswers / questionsAndAnswers.length * 100 
+  let percentageScore = (numCorrectAnswers / questionsAndAnswers.length * 100 ).toFixed(0)
   if (percentageScore >= 70) {
     percentageClass = "excellent";
   } else if (percentageScore < 70 && percentageScore >= 45) {
