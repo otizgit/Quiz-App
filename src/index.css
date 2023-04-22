@@ -277,7 +277,7 @@
   animation: bop 1s linear infinite alternate;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1100px) {
   .answer-btn-container {
     width: 85%;
   }
