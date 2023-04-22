@@ -12,7 +12,7 @@ export default function QuestionBox(props) {
 
   React.useEffect(() => {
     if (questions.length === 0) {
-      fetch("https://opentdb.com/api.php?amount=20&category=9&type=multiple")
+      fetch("https://opentdb.com/api.php?amount=30&category=17&difficulty=easy&type=multiple")
         .then((response) => response.json())
         .then((data) => {
           setQuestions(data.results);
