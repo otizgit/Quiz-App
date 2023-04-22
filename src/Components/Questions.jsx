@@ -102,6 +102,16 @@ export default function QuestionBox(props) {
     />
   ));
 
+  let percentageClass;
+  let percentageScore = numCorrectAnswers / questionsAndAnswers.length * 100 
+  if (percentageScore >= 70) {
+    percentageClass = "excellent";
+  } else if (percentageScore < 70 && percentageScore >= 45) {
+    percentageClass = "good";
+  } else {
+    percentageClass = "bad";
+  }
+
   return (
     <div className="hero question-container">
       {allQuestions}
@@ -119,8 +129,10 @@ export default function QuestionBox(props) {
       {showResults && (
         <div className="result-container">
           <p className="result-message">
-            You scored {numCorrectAnswers}/{questionsAndAnswers.length} correct
-            answers.
+            Your score: {numCorrectAnswers}/{questionsAndAnswers.length}{" "}
+            <span className={percentageClass}>
+              ({percentageScore}%)
+            </span>
           </p>
           <button className="play-btn custom-btn" onClick={playAgain}>
             Play Again

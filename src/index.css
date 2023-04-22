@@ -249,12 +249,26 @@
   text-align: center;
   margin-top: clamp(1rem, 1vw, 3rem);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 1rem;
 }
 .result-message {
   color: var(--white);
+  font-size: clamp(1.4rem, 1vw, 3rem);
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.excellent {
+  color: green;
+}
+.good {
+  color: rgb(224, 224, 3)
+}
+.bad {
+  color: red;
 }
 
 .play-btn {
